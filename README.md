@@ -1,46 +1,85 @@
-# Getting Started with Create React App
+# Music Studio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive music application built with React and TypeScript. This app allows you to play piano notes and electronic drum sounds using your mouse or keyboard.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Interactive piano keyboard with white and black keys
+- Electronic drum pad with modern synthesized sounds
+- Demo beat sequence showcasing the drum pad capabilities
+- Hold-to-repeat functionality for rhythmic patterns
+- Visual feedback when keys/pads are pressed
+- Clean, responsive design
 
-### `npm start`
+## Instruments
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Piano
+- Interactive keyboard with one octave range
+- Visual feedback when keys are pressed
+- Keyboard controls for easy playing
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Electronic Sound Pad
+- 12 different electronic sounds inspired by modern music production
+- Wobble bass, vocal chops, glitch effects, and more
+- Hold-to-repeat functionality for creating rhythmic patterns
+- Demo beat sequence showcasing the sounds
 
-### `npm test`
+## Keyboard Controls
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Piano
+- White keys: A, S, D, F, G, H, J, K
+- Black keys: W, E, T, Y, U
 
-### `npm run build`
+### Drum Pad
+- Top row: 1, 2, 3, 4, Q, W, E, R
+- Bottom row: A, S, D, F
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- TypeScript
+- Tone.js (for audio synthesis)
+- CSS for styling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Node.js (v14 or later)
+- npm or yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone this repository or download the source code
+2. Navigate to the project directory
+3. Install dependencies:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+### Running the App
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Start the development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
+
+The app will open in your browser at `http://localhost:3000`.
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## How It Works
+
+The app uses Tone.js, a Web Audio framework, to generate sounds in real-time. When a key or pad is pressed (either by mouse or keyboard), the app triggers the corresponding sound using various Tone.js synthesizers.
+
+## License
+
+This project is open source and available under the MIT License.

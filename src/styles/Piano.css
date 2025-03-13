@@ -1,0 +1,170 @@
+.piano-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.piano {
+  display: flex;
+  position: relative;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.piano-key {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.white-key {
+  width: 60px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+}
+
+.black-key {
+  width: 40px;
+  height: 120px;
+  background-color: #333;
+  margin-left: -20px;
+  margin-right: -20px;
+  z-index: 2;
+  border-radius: 0 0 5px 5px;
+  color: white;
+}
+
+.white-key:hover {
+  background-color: #f0f0f0;
+}
+
+.black-key:hover {
+  background-color: #555;
+}
+
+.white-key:active, .white-key.active {
+  background-color: #e0e0e0;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.black-key:active, .black-key.active {
+  background-color: #222;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+.key-label {
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.keyboard-label {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-bottom: 10px;
+}
+
+.black-key .keyboard-label {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.status-indicator {
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.status-indicator.ready {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-indicator.not-ready {
+  background-color: #ff9800;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.instructions {
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.loading-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-left-color: #4a90e2;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+} 
